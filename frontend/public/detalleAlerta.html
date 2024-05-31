@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Recordatorios</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="detalleAlerta.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Detalle del Recordatorio -->
+        <div class="form-container" id="recordatorio-detalle">
+            <h2 class="text-center">Mis recordatorios</h2>
+            <div class="divider"></div>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre del recordatorio:</label>
+                    <input type="text" class="form-control" id="nombre" value="Recordatorio 4" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción del recordatorio:</label>
+                    <textarea class="form-control" id="descripcion" rows="3" readonly>Desenchufar los televisores de la casa antes de dormir.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="text" class="form-control" id="fecha" value="24-04-2024" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <input type="text" class="form-control" id="hora" value="08:00 p.m." readonly>
+                </div>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-primary btn-block" id="actualizarBtn">Actualizar</button>
+                    <button type="button" class="btn btn-danger btn-block" id="eliminarBtn">Eliminar Dispositivo</button>
+                </div>
+                <div class="form-group text-center d-none" id="updateButtons">
+                    <button type="submit" class="btn btn-success btn-block">Guardar cambios</button>
+                    <button type="button" class="btn btn-danger btn-block" id="cancelarBtn">CANCELAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Mensaje de confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Seguro que quieres eliminar este recordatorio?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-confirm" id="confirmDeleteBtn">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        document.getElementById('actualizarBtn').addEventListener('click', function() {
+            // Habilita los campos para editar excepto el de consumo
+            document.querySelectorAll('.form-control').forEach(function(input) {
+                input.removeAttribute('readonly');
+                input.removeAttribute('disabled');
+            });
+            // Muestra los botones de guardar y cancelar
+            document.getElementById('updateButtons').classList.remove('d-none');
+            // Oculta el botón de actualizar y eliminar
+            document.getElementById('actualizarBtn').classList.add('d-none');
+            document.getElementById('eliminarBtn').classList.add('d-none');
+        });
+    
+        document.getElementById('cancelarBtn').addEventListener('click', function() {
+            // Vuelve a poner los campos en solo lectura y deshabilitados
+            document.querySelectorAll('.form-control').forEach(function(input) {
+                input.setAttribute('readonly', '');
+                input.setAttribute('disabled', '');
+            });
+            // Oculta los botones de guardar y cancelar
+            document.getElementById('updateButtons').classList.add('d-none');
+            // Muestra el botón de actualizar y eliminar
+            document.getElementById('actualizarBtn').classList.remove('d-none');
+            document.getElementById('eliminarBtn').classList.remove('d-none');
+        });
+
+        document.getElementById('eliminarBtn').addEventListener('click', function() {
+            $('#confirmModal').modal('show');
+        });
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+            // Lógica para eliminar el dispositivo
+            // Después de eliminar, redirigir a dispositivos.html
+            window.location.href = 'alertas.html';
+        });
+    </script>
+</body>
+</html>

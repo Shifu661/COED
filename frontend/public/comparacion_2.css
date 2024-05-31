@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+}
+.container{
+    width: 90%;    
+}
+.comparison-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group label {
+    font-weight: bold;
+}
+.result-container {
+    text-align: center;
+}
+.result-container .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.low-consumption {
+    color: green;
+}
+.medium-consumption {
+    color: orange;
+}
+.high-consumption {
+    color: red;
+}
+.btn-custom {
+    width: 100%;
+}
+.mt-3{
+    background-color: #ffa500;
+}

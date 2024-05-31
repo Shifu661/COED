@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Dispositivos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="dispositivos.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Mis dispositivos</h2>
+        <hr>
+        <ul class="device-list">
+            <li><button class="btn btn-device" onclick="window.location.href='detalleDispositivo.html'">1. Televisor LG Sala</button></li>
+            <li><button class="btn btn-device">2. Televisor LG Cocina</button></li>
+            <li><button class="btn btn-device">3. Televisor Cuarto 1</button></li>
+            <li><button class="btn btn-device">4. Laptop HP Elvis</button></li>
+            <li><button class="btn btn-device">5. Laptop HP Mauricio</button></li>
+            <li><button class="btn btn-device">6. Celular Xiaomi Elvis</button></li>
+            <li><button class="btn btn-device">7. Refrigeradora</button></li>
+            <li><button class="btn btn-device">8. Play Station 4</button></li>
+            <li><button class="btn btn-device">9. Microondas</button></li>
+        </ul>
+        <button type="button" class="btn btn-register" onclick="window.location.href='registerDispositivo.html'">Registrar Dispositivo</button>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>        
+        <div class="menu mt-3 mx-auto" style="max-width: 400px;">
+            <a href="pagPrincipal.html">Home</a>
+            <a href="cuenta.html">Mi Cuenta</a>
+            <a href="alertas.html">Recordatorios</a>
+            <a href="colabFamiliar.html">Colaboración Familiar</a>
+        </div>
+    </div>
+    <!-- Script para mostrar/ocultar el menú -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('show-menu');
+            });
+        });
+    </script>
+</body>
+</html>

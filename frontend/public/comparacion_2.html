@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparación de Dispositivos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="comparacion_2.css">
+</head>
+<body>
+    <div class="container comparison-container">
+        <h4 class="text-center">Comparación</h4>
+        <div class="form-group">
+            <label for="dispositivosComparados">Dispositivos comparados:</label>
+            <input type="text" class="form-control" id="dispositivosComparados" value="Televisor LG Sala" disabled>
+            <input type="text" class="form-control mt-2" id="otroDispositivoComparado" value="Celular Xiaomi Elvis" disabled>
+        </div>
+        <div class="result-container">
+            <h5>Comparación:</h5>
+            <div class="row">
+                <div class="col-6">
+                    <i class="fas fa-tv icon high-consumption"></i>
+                    <p>100 kWh</p>
+                </div>
+                <div class="col-6">
+                    <i class="fas fa-mobile-alt icon low-consumption"></i>
+                    <p>40 kWh</p>
+                </div>
+            </div>
+            <p class="mt-3">Mayor consumo del <strong>"Televisor LG Cocina"</strong>. Recomendamos apagar o desconectar el dispositivo.</p>
+            <div class="row">
+                <div class="col-4">
+                    <i class="fas fa-check-circle icon low-consumption"></i>
+                    <p>Bajo Consumo</p>
+                </div>
+                <div class="col-4">
+                    <i class="fas fa-exclamation-circle icon medium-consumption"></i>
+                    <p>Consumo Medio</p>
+                </div>
+                <div class="col-4">
+                    <i class="fas fa-times-circle icon high-consumption"></i>
+                    <p>Alto Consumo</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <button type="button" class="btn btn-primary btn-custom" onclick="window.location.href='comparacion.html'">REGRESAR</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

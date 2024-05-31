@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Usuarios - Colaboración Familiar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="eliminarUsuarioPermitido.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Colaboración Familiar</h2>
+            <div class="divider"></div>
+            <p class="text-center font-weight-bold">Lista de usuarios permitidos:</p>
+            <ul class="list-group" id="userList">
+                <li class="list-group-item">1. ecrucesg <i class="fas fa-trash" data-toggle="modal" data-target="#confirmModal" data-user="1. ecrucesg"></i></li>
+                <li class="list-group-item">2. chuamanit <i class="fas fa-trash" data-toggle="modal" data-target="#confirmModal" data-user="2. chuamanit"></i></li>
+                <li class="list-group-item">3. ymirandav <i class="fas fa-trash" data-toggle="modal" data-target="#confirmModal" data-user="3. ymirandav"></i></li>
+                <li class="list-group-item">4. lgonzalesu <i class="fas fa-trash" data-toggle="modal" data-target="#confirmModal" data-user="4. lgonzalesu"></i></li>
+                <li class="list-group-item">5. ccorralesy <i class="fas fa-trash" data-toggle="modal" data-target="#confirmModal" data-user="5. ccorralesy"></i></li>
+                <li class="list-group-item">6. ldezac <i class="fas fa-trash" data-toggle="modal" data-target="#confirmModal" data-user="6. ldezac"></i></li>
+            </ul>
+            <div class="d-flex justify-content-center mt-3">
+                <button class="btn-red" onclick="window.location.href='colabFamiliar.html'">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Mensaje de confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Seguro que quieres eliminar este usuario?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-confirm" id="confirmDeleteBtn">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let userToDelete = null;
+
+        $('#confirmModal').on('show.bs.modal', function (event) {
+            const button = $(event.relatedTarget);
+            userToDelete = button.data('user');
+        });
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+            const userList = document.getElementById('userList');
+            const items = userList.getElementsByClassName('list-group-item');
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].textContent.includes(userToDelete)) {
+                    items[i].remove();
+                    break;
+                }
+            }
+            $('#confirmModal').modal('hide');
+        });
+    </script>
+</body>
+</html>

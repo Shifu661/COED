@@ -1,0 +1,57 @@
+body {
+    background-color: #e6f0ff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: x-large;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+option {
+    font-size: medium;
+}
+
+.btn-register {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+}
+
+.btn-light {
+    background-color: #e6f0ff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Estilos personalizados para el título en dos líneas */
+.two-line-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.two-line-title span {
+    line-height: 1.2; /* Altura de línea ajustada */
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboración Familiar</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="colabFamiliar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Colaboración Familiar</h2>
+            <div class="divider"></div>
+            <p class="text-center font-weight-bold">Lista de usuarios permitidos</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <input type="text" value="1. ecrucesg" readonly>
+                </li>
+                <li class="list-group-item">
+                    <input type="text" value="2. chuamanit" readonly>
+                </li>
+                <li class="list-group-item">
+                    <input type="text" value="3. ymirandav" readonly>
+                </li>
+                <li class="list-group-item">
+                    <input type="text" value="4. lgonzalesu" readonly>
+                </li>
+                <li class="list-group-item">
+                    <input type="text" value="5. ccorralesy" readonly>
+                </li>
+                <li class="list-group-item">
+                    <input type="text" value="6. ldezac" readonly>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center mt-3">
+                <button class="btn-green" onclick="window.location.href='agregarUsuarioPermitido.html'">+</button>
+                <button class="btn-red" onclick="window.location.href='eliminarUsuarioPermitido.html'">-</button>
+            </div>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>        
+        <div class="menu mt-3 mx-auto" style="max-width: 400px;">
+            <a href="pagPrincipal.html">Home</a>
+            <a href="cuenta.html">Mi Cuenta</a>
+            <a href="dispositivos.html">Dispositivos</a>
+            <a href="alertas.html">Recordatorios</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script para mostrar/ocultar el menú -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('show-menu');
+            });
+        });
+    </script>
+</body>
+</html>

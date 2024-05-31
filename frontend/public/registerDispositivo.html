@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Nuevo Dispositivo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="registerDispositivo.css">
+</head>
+<body>
+    <div class="container mt-4">  
+        <a href="dispositivos.html" class="btn btn-light"><i class="fas fa-arrow-left"></i></a>
+        <h2 class="text-center flex-grow-1 two-line-title">
+            <span>Registrar Nuevo</span>
+            <span>Dispositivo</span>
+        </h2>
+        <hr>
+        <form>
+            <div class="form-group">
+                <label for="nombre-dispositivo">Nombre del dispositivo:</label>
+                <input type="text" class="form-control" id="nombre-dispositivo">
+            </div>
+            <div class="form-group">
+                <label for="tipo-dispositivo">Tipo de dispositivo:</label>
+                <select class="form-control" id="tipo-dispositivo">
+                    <option value="">Seleccionar tipo</option>
+                    <option class="options" value="televisor">Televisor</option>
+                    <option class="options" value="laptop">Laptop</option>
+                    <option class="options" value="celular">Celular</option>
+                    <option class="options" value="refrigeradora">Refrigeradora</option>
+                    <option class="options" value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="descripcion-dispositivo">Descripción del dispositivo:</label>
+                <textarea class="form-control" id="descripcion-dispositivo" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" class="form-control" id="marca">
+            </div>
+            <button type="submit" class="btn btn-register">REGISTRAR</button>
+        </form>
+        <hr>
+    </div>
+</body>
+</html>

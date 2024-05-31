@@ -1,0 +1,118 @@
+/* styles.css */
+
+body {
+    background-color: #e0f7fa;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+h3 {
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+}
+
+.menu {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #b0b0b0;
+    border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        margin-top: 16px;
+        margin-right: 5px;
+    }
+    .menu {
+        background-color: #dadada;
+        width: 50%;
+        max-width: 300px;
+        z-index: 1000;
+        top: 20px;
+        right: 20px;
+        position: fixed;
+        display: none;
+    }
+    .menu.show-menu {
+        display: block !important;
+    }
+    .menu a {
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+}
+
+.menu-toggle {
+    position: fixed;
+    top: -10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* Estilos para mostrar el menú */
+.menu.show-menu {
+    display: block !important;
+}
+
+/* Estilo para el botón de activar/desactivar */
+.estado i {
+    font-size: 36px; /* Tamaño del icono */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+}
+
+.estado i.fa-toggle-on {
+    color: #4deb72; /* Color del icono activado */
+}
+
+.estado i.fa-toggle-off {
+    color: #5c5c5c; /* Color del icono desactivado */
+}
+
+/* Estilo para el nombre del recordatorio */
+.nombre-recordatorio {
+    font-size: 15px; /* Tamaño de la letra */
+    color: #000;
+}
+
+/* Estilo para la hora del recordatorio */
+.hora-recordatorio {
+    font-size: 28px; /* Tamaño de la letra */
+    color: #6c757d; /* Color del texto */
+}
+
+/* Estilo para el enlace de la tarjeta */
+.tarjeta-enlace {
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: inherit; /* Heredar color del texto */
+}

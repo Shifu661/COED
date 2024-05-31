@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Recordatorios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="alertas.css">
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <h3 class="text-center flex-grow-1">Mis recordatorios</h3>
+            <div class="dropdown">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>        
+                <div class="menu mt-3 mx-auto" style="max-width: 400px;">
+                    <a href="pagPrincipal.html">Home</a>
+                    <a href="cuenta.html">Mi Cuenta</a>
+                    <a href="dispositivos.html">Mis Dispositivos</a>
+                    <a href="colabFamiliar.html">Colaboración Familiar</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <div class="card mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="detalleAlerta.html" class="tarjeta-enlace">
+                            <span class="nombre-recordatorio">Recordatorio 1</span>
+                            <div class="hora-recordatorio">06:00 a.m.</div>
+                        </a>
+                    </div>
+                    <div class="estado">
+                        <i class="fas fa-toggle-on"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="alertas.html" class="tarjeta-enlace">
+                            <span class="nombre-recordatorio">Recordatorio 2</span>
+                            <div class="hora-recordatorio">10:00 a.m.</div>
+                        </a>
+                    </div>
+                    <div class="estado">
+                        <i class="fas fa-toggle-on"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="alertas.html" class="tarjeta-enlace">
+                            <span class="nombre-recordatorio">Recordatorio 3</span>
+                            <div class="hora-recordatorio">01:00 p.m.</div>
+                        </a>
+                    </div>
+                    <div class="estado">
+                        <i class="fas fa-toggle-off"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="alertas.html" class="tarjeta-enlace">
+                            <span class="nombre-recordatorio">Recordatorio 4</span>
+                            <div class="hora-recordatorio">08:00 p.m.</div>
+                        </a>
+                    </div>
+                    <div class="estado">
+                        <i class="fas fa-toggle-on"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" onclick="window.location.href='registerAlerta.html'">Crear Alerta</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Script para mostrar/ocultar el menú -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('show-menu');
+            });
+
+            const estados = document.querySelectorAll('.estado i');
+
+            // Iterar sobre cada elemento y agregar un evento de clic
+            estados.forEach(estado => {
+                estado.addEventListener('click', function() {
+                    // Cambiar el estado del icono
+                    if (estado.classList.contains('fa-toggle-on')) {
+                        estado.classList.remove('fa-toggle-on');
+                        estado.classList.add('fa-toggle-off');
+                    } else {
+                        estado.classList.remove('fa-toggle-off');
+                        estado.classList.add('fa-toggle-on');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
