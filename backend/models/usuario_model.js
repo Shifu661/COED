@@ -84,16 +84,6 @@ const UsuarioModel = {
     });
   },  
 
-  // loginUsuario: (usuario, password, callback) => {
-  //   const sql = 'SELECT * FROM usuario WHERE usuario = $1 AND password = $2';
-  //   connection.query(sql, [usuario, password], (err, result) => {
-  //       if (err) {
-  //           return callback(err);
-  //       }
-  //       return callback(null, result.rows);
-  //   });
-  // },
-
   loginUsuario: (usuario, password, callback) => {
     const sql = 'SELECT * FROM usuario WHERE usuario = $1 AND password = $2';
     connection.query(sql, [usuario, password], (err, result) => {
