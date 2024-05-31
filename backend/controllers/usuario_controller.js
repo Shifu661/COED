@@ -89,25 +89,6 @@ export const deleteUsuarioId = async (req, res) => {
 }
 
 // Controlador para iniciar sesión
-// export const loginUsuario = async (req, res) => {
-//     const { usuario, password } = req.body;
-
-//     try {
-//         UsuarioModel.loginUsuario(usuario, password, (err, result) => {
-//             if (err) {
-//                 res.status(500).json({ error: 'Error al iniciar sesión' });
-//             } else if (result.length === 0) {
-//                 res.status(401).json({ error: 'Credenciales inválidas' });
-//             } else {
-//                 res.status(200).json({ message: 'Inicio de sesión exitoso' });
-//             }
-//         });
-//     } catch (error) {
-//         res.status(500).json({ error: 'Error al iniciar sesión' });
-//     }
-// };
-
-// Controlador para iniciar sesión
 export const loginUsuario = async (req, res) => {
     const { usuario, password } = req.body;
 

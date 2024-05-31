@@ -1,34 +1,3 @@
-// document.getElementById('loginForm').addEventListener('submit', function(event) {
-//   event.preventDefault(); // Evita el envío del formulario por defecto
-
-//   var username = document.getElementById('username').value;
-//   var password = document.getElementById('password').value;
-
-//   // Verifica si el usuario es admin y la contraseña es admin
-//   if (username === 'admin' && password === 'admin') {
-//       // Muestra una ventana emergente de SweetAlert2 con el mensaje de bienvenida
-//       Swal.fire({
-//           icon: 'success',
-//           title: '¡Bienvenido!',
-//           text: 'Ha iniciado sesión correctamente.',
-//           timer: 1000, // El mensaje desaparecerá después de 3 segundos
-//           showConfirmButton: false
-//       }).then((result) => {
-//           // Redirige al usuario a la página principal después de que el mensaje desaparezca
-//           if (result.dismiss === Swal.DismissReason.timer) {
-//               window.location.href = 'pagPrincipal.html';
-//           }
-//       });
-//   } else {
-//       // Muestra un mensaje de error
-//       Swal.fire({
-//           icon: 'error',
-//           title: 'Error',
-//           text: 'Credenciales incorrectas. Por favor, inténtelo de nuevo.'
-//       });
-//   }
-// });
-
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío del formulario por defecto
   
